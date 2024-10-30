@@ -26,9 +26,6 @@ if 'uploaded_file' not in st.session_state:
 ## Init login form function
 login_form()
 
-## Init conversation history function
-ask_image()
-
 # ASK FOR IMAGE
 if st.session_state['logged_in']:
     st.title("Image Chatbot")
@@ -36,4 +33,7 @@ if st.session_state['logged_in']:
     
     # File uploader for image
     st.session_state['uploaded_file'] = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+    
+    # Init conversation history function
+    ask_image()
     
